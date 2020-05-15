@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
     
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
     }
     
     func showQuestion() {
-        if questionNumber < 5 {
+        if questionNumber < allQuestions.questionList.count-1 {
             questionLabel.text = allQuestions.questionList[questionNumber].question
         } else {
             let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions", preferredStyle: .alert)
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
             alert.addAction(stop)
             
             present(alert, animated: true, completion: nil)
-            
+            startOver()
         }
         
         let answer = allQuestions.questionList[questionNumber].correctAnswer
@@ -78,11 +79,17 @@ class ViewController: UIViewController {
         } else {
             print("Wrong!")
         }
-        if questionNumber < 5 {
+        if questionNumber < allQuestions.questionList.count-1 {
             questionNumber += 1
         }
         showQuestion()
     }
+    
+    func startOver() {
+        questionNumber = 0
+        showQuestion()
+    }
+    
     
 }
 
