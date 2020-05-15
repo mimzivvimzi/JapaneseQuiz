@@ -7,3 +7,16 @@
 //
 
 import Foundation
+import SwiftyJSON
+
+class Word {
+    var japaneseWord: String
+    var englishWord: String
+    
+    init(japaneseWord: String, englishWord: String) {
+        self.japaneseWord = japaneseWord
+        self.englishWord = englishWord
+//        self.japaneseWord = json["data"]["slug"].stringValue
+//        self.englishWord = json["data"]["senses"]["english_definitions"].stringValue
+    }
+}

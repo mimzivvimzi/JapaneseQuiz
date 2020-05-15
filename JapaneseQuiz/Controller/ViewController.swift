@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -16,6 +18,8 @@ class ViewController: UIViewController {
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
     var score = 0
+    
+    var myWordArray = [Word]()
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
@@ -28,9 +32,32 @@ class ViewController: UIViewController {
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         showQuestion()
         updateUI()
+        makeAPICall()
     }
     
-    
+    func makeAPICall() {
+        let url = URL(string: "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n4")!
+        AF.request(url).validate().responseJSON { (response) in
+            switch response.result {
+            case .success(_):
+                if let value = response.value {
+                    let json = JSON(value)
+                    print(json)
+                    for i in 0..<20 {
+                        let japaneseWord = json["data"][i]["japanese"][0]["word"].stringValue
+                        let englishWord = json["data"][i]["senses"][0]["english_definitions"][0].stringValue
+                        print(japaneseWord)
+                        print(englishWord)
+                        let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
+                        self.myWordArray.append(myWord)
+                        print(json.count)
+                    }
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
     
     
     func showQuestion() {
