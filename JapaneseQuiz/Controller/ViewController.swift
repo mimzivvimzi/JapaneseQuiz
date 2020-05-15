@@ -42,15 +42,16 @@ class ViewController: UIViewController {
             case .success(_):
                 if let value = response.value {
                     let json = JSON(value)
+                    let dataBranch = json["data"]
                     print(json)
-                    for i in 0..<20 {
+                    for i in 0..<dataBranch.count {
                         let japaneseWord = json["data"][i]["japanese"][0]["word"].stringValue
                         let englishWord = json["data"][i]["senses"][0]["english_definitions"][0].stringValue
                         print(japaneseWord)
                         print(englishWord)
                         let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
                         self.myWordArray.append(myWord)
-                        print(json.count)
+                        print(dataBranch.count)
                     }
                 }
             case .failure(let error):
