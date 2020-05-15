@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3147CB4366518EDC88DECA18 /* Pods_JapaneseQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535CEAAD20D7CDD1298EF1AF /* Pods_JapaneseQuiz.framework */; };
 		690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AB246D2E2C00CBBF7C /* AppDelegate.swift */; };
 		690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AD246D2E2C00CBBF7C /* SceneDelegate.swift */; };
 		690585B0246D2E2C00CBBF7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AF246D2E2C00CBBF7C /* ViewController.swift */; };
@@ -15,9 +16,11 @@
 		690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */; };
 		690585C0246D3C6000CBBF7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585BF246D3C6000CBBF7C /* Question.swift */; };
 		690585C2246D3C7700CBBF7C /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585C1246D3C7700CBBF7C /* QuestionBank.swift */; };
+		69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F677BB246EBEF700A35BC0 /* JishoWords.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		535CEAAD20D7CDD1298EF1AF /* Pods_JapaneseQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		690585A8246D2E2C00CBBF7C /* JapaneseQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690585AB246D2E2C00CBBF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		690585AD246D2E2C00CBBF7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		690585B9246D2E2F00CBBF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690585BF246D3C6000CBBF7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		690585C1246D3C7700CBBF7C /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
+		69F677BB246EBEF700A35BC0 /* JishoWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JishoWords.swift; sourceTree = "<group>"; };
+		CE8C9B94226C3DEC03713DF9 /* Pods-JapaneseQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseQuiz.release.xcconfig"; path = "Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz.release.xcconfig"; sourceTree = "<group>"; };
+		FC4802ACCBE03F30C4CA3175 /* Pods-JapaneseQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseQuiz.debug.xcconfig"; path = "Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +41,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3147CB4366518EDC88DECA18 /* Pods_JapaneseQuiz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		196773F880D58FA7271EBA3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC4802ACCBE03F30C4CA3175 /* Pods-JapaneseQuiz.debug.xcconfig */,
+				CE8C9B94226C3DEC03713DF9 /* Pods-JapaneseQuiz.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		6905859F246D2E2B00CBBF7C = {
 			isa = PBXGroup;
 			children = (
 				690585AA246D2E2C00CBBF7C /* JapaneseQuiz */,
 				690585A9246D2E2C00CBBF7C /* Products */,
+				196773F880D58FA7271EBA3C /* Pods */,
+				AF2007A98AF318824468083A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +94,7 @@
 			children = (
 				690585BF246D3C6000CBBF7C /* Question.swift */,
 				690585C1246D3C7700CBBF7C /* QuestionBank.swift */,
+				69F677BB246EBEF700A35BC0 /* JishoWords.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +117,14 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AF2007A98AF318824468083A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				535CEAAD20D7CDD1298EF1AF /* Pods_JapaneseQuiz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -104,9 +132,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 690585BC246D2E2F00CBBF7C /* Build configuration list for PBXNativeTarget "JapaneseQuiz" */;
 			buildPhases = (
+				6285D12F99D0FC21106D25D5 /* [CP] Check Pods Manifest.lock */,
 				690585A4246D2E2B00CBBF7C /* Sources */,
 				690585A5246D2E2B00CBBF7C /* Frameworks */,
 				690585A6246D2E2B00CBBF7C /* Resources */,
+				250E6FB325CD28BFEC36E69C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,12 +193,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		250E6FB325CD28BFEC36E69C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6285D12F99D0FC21106D25D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JapaneseQuiz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		690585A4246D2E2B00CBBF7C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				690585B0246D2E2C00CBBF7C /* ViewController.swift in Sources */,
+				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
 				690585C0246D3C6000CBBF7C /* Question.swift in Sources */,
 				690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */,
 				690585C2246D3C7700CBBF7C /* QuestionBank.swift in Sources */,
@@ -314,6 +387,7 @@
 		};
 		690585BD246D2E2F00CBBF7C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC4802ACCBE03F30C4CA3175 /* Pods-JapaneseQuiz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +405,7 @@
 		};
 		690585BE246D2E2F00CBBF7C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE8C9B94226C3DEC03713DF9 /* Pods-JapaneseQuiz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
