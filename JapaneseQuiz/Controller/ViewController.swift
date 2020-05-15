@@ -15,14 +15,19 @@ class ViewController: UIViewController {
     var questionNumber = 0
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
+    var score = 0
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
-    
+            
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.layer.cornerRadius = 20
+        button2.layer.cornerRadius = 20
+        self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         showQuestion()
+        updateUI()
     }
     
     func showQuestion() {
@@ -36,6 +41,7 @@ class ViewController: UIViewController {
             
             present(alert, animated: true, completion: nil)
             startOver()
+            updateUI()
         }
         
         let answer = allQuestions.questionList[questionNumber].correctAnswer
@@ -63,6 +69,8 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.questionList[questionNumber].correctAnswer
         if button1.currentTitle == correctAnswer {
             print("Correct")
+            addToScore()
+            updateUI()
         } else {
             print("Wrong")
         }
@@ -76,6 +84,8 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.questionList[questionNumber].correctAnswer
         if button2.currentTitle == correctAnswer {
             print("Correct!")
+            addToScore()
+            updateUI()
         } else {
             print("Wrong!")
         }
@@ -87,7 +97,16 @@ class ViewController: UIViewController {
     
     func startOver() {
         questionNumber = 0
+        score = 0
         showQuestion()
+    }
+    
+    func addToScore() {
+        score += 1
+    }
+    
+    func updateUI() {
+        scoreLabel.text = "Score: \(score)"
     }
     
     
