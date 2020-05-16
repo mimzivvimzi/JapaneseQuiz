@@ -16,7 +16,5 @@ class Word {
     init(japaneseWord: String, englishWord: String) {
         self.japaneseWord = japaneseWord
         self.englishWord = englishWord
-//        self.japaneseWord = json["data"]["slug"].stringValue
-//        self.englishWord = json["data"]["senses"]["english_definitions"].stringValue
     }
 }

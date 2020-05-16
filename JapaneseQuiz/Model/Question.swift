@@ -11,9 +11,9 @@ import Foundation
 
 class Question {
     
-    let question: String?
-    let correctAnswer: String?
-    let wrongAnswer: String?
+    let question: String
+    let correctAnswer: String
+    let wrongAnswer: String
     
     init(question: String, correctAnswer: String, wrongAnswer: String) {
         self.question = question

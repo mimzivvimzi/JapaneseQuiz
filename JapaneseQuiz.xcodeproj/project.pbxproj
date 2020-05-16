@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		690585B5246D2E2F00CBBF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690585B4246D2E2F00CBBF7C /* Assets.xcassets */; };
 		690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */; };
 		690585C0246D3C6000CBBF7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585BF246D3C6000CBBF7C /* Question.swift */; };
-		690585C2246D3C7700CBBF7C /* QuestionBank.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585C1246D3C7700CBBF7C /* QuestionBank.swift */; };
 		69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F677BB246EBEF700A35BC0 /* JishoWords.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		690585B7246D2E2F00CBBF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		690585B9246D2E2F00CBBF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690585BF246D3C6000CBBF7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
-		690585C1246D3C7700CBBF7C /* QuestionBank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBank.swift; sourceTree = "<group>"; };
 		69F677BB246EBEF700A35BC0 /* JishoWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JishoWords.swift; sourceTree = "<group>"; };
 		CE8C9B94226C3DEC03713DF9 /* Pods-JapaneseQuiz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseQuiz.release.xcconfig"; path = "Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz.release.xcconfig"; sourceTree = "<group>"; };
 		FC4802ACCBE03F30C4CA3175 /* Pods-JapaneseQuiz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JapaneseQuiz.debug.xcconfig"; path = "Target Support Files/Pods-JapaneseQuiz/Pods-JapaneseQuiz.debug.xcconfig"; sourceTree = "<group>"; };
@@ -54,7 +52,6 @@
 				FC4802ACCBE03F30C4CA3175 /* Pods-JapaneseQuiz.debug.xcconfig */,
 				CE8C9B94226C3DEC03713DF9 /* Pods-JapaneseQuiz.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -93,7 +90,6 @@
 			isa = PBXGroup;
 			children = (
 				690585BF246D3C6000CBBF7C /* Question.swift */,
-				690585C1246D3C7700CBBF7C /* QuestionBank.swift */,
 				69F677BB246EBEF700A35BC0 /* JishoWords.swift */,
 			);
 			path = Model;
@@ -244,7 +240,6 @@
 				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
 				690585C0246D3C6000CBBF7C /* Question.swift in Sources */,
 				690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */,
-				690585C2246D3C7700CBBF7C /* QuestionBank.swift in Sources */,
 				690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
