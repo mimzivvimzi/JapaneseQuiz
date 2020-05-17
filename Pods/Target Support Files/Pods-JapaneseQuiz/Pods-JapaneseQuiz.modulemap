@@ -1,6 +1,0 @@
-framework module Pods_JapaneseQuiz {
-  umbrella header "Pods-JapaneseQuiz-umbrella.h"
-
-  export *
-  module * { export * }
-}
