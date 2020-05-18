@@ -16,7 +16,12 @@ class ViewController: UIViewController {
     var questionNumber = 0
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
-    var score = 0
+    
+    var score = -1 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
+    }
     
     var allQuestions = [Question]()
     var myWordArray = [Word]()
@@ -31,12 +36,8 @@ class ViewController: UIViewController {
         button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         makeAPICall()
+        score = 0
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
-            for i in 0..<self.allQuestions.count {
-                self.showQuestion()
-            }
-        })
     }
     
     func makeAPICall() {
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
         AF.request(url).validate().responseJSON { (response) in
             switch response.result {
             case .success(_):
-                if let value = response.value {
+                guard let value = response.value else { return }
                     let json = JSON(value)
                     let dataBranch = json["data"]
 //                    print(json)
@@ -58,7 +59,7 @@ class ViewController: UIViewController {
                         print("myWordArray is \(self.myWordArray)")
 //                        print(dataBranch.count)
                     }
-                }
+                
                 var possibleWrongAnswers = [String]()
                 for i in 0..<self.myWordArray.count {
                     let englishQuestion = self.myWordArray[i].englishWord
@@ -79,6 +80,7 @@ class ViewController: UIViewController {
                         print(self.allQuestions.count)
                     }
                 }
+                self.showQuestion()
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -87,7 +89,7 @@ class ViewController: UIViewController {
     
     
     func showQuestion() {
-        if questionNumber < allQuestions.count-1 {
+        if questionNumber < allQuestions.count {
             print("***questionNumber is \(questionNumber)")
             questionLabel.text = allQuestions[questionNumber].question
         } else {
@@ -98,7 +100,6 @@ class ViewController: UIViewController {
 
             present(alert, animated: true, completion: nil)
             startOver()
-            updateUI()
         }
 
         let answer = allQuestions[questionNumber].correctAnswer
@@ -123,11 +124,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button1Pressed(_ sender: UIButton) {
+        guard allQuestions.count > questionNumber else { return }
         let correctAnswer = allQuestions[questionNumber].correctAnswer
         if button1.currentTitle == correctAnswer {
             print("Correct")
             addToScore()
-            updateUI()
         } else {
             print("Wrong")
         }
@@ -137,11 +138,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func button2Pressed(_ sender: UIButton) {
+        guard allQuestions.count > questionNumber else { return }
         let correctAnswer = allQuestions[questionNumber].correctAnswer
         if button2.currentTitle == correctAnswer {
             print("Correct!")
             addToScore()
-            updateUI()
         } else {
             print("Wrong!")
         }
@@ -159,11 +160,5 @@ class ViewController: UIViewController {
     func addToScore() {
         score += 1
     }
-
-    func updateUI() {
-        scoreLabel.text = "Score: \(score)"
-    }
-
-
 }
 
