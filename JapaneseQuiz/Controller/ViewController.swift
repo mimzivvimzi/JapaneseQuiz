@@ -12,6 +12,7 @@ import Alamofire
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var beginningOfQuestion: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     var questionNumber = 0
     var randomNumberForCorrectAnswer: Int?
@@ -29,9 +30,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
-            
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpConstraints()  
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
@@ -136,21 +138,21 @@ class ViewController: UIViewController {
         print("questionNumber is \(questionNumber)")
         showQuestion()
     }
-
+    
     @IBAction func button2Pressed(_ sender: UIButton) {
         guard allQuestions.count > questionNumber else { return }
         let correctAnswer = allQuestions[questionNumber].correctAnswer
         if button2.currentTitle == correctAnswer {
-            print("Correct!")
+            print("Correct")
             addToScore()
         } else {
-            print("Wrong!")
+            print("Wrong")
         }
         questionNumber += 1
         print("questionNumber is \(questionNumber)")
         showQuestion()
     }
-
+    
     func startOver() {
         questionNumber = 0
         score = 0
