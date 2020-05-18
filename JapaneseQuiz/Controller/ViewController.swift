@@ -69,10 +69,24 @@ class ViewController: UIViewController {
                     let correctAnswer = self.myWordArray[i].japaneseWord
                     print("correctAnswer is \(correctAnswer)")
                     let randomNumber = Int.random(in: 0..<self.myWordArray.count)
-                    let test = self.myWordArray[randomNumber].japaneseWord
+                    var test = self.myWordArray[randomNumber].japaneseWord
                     print("test is \(test)")
                     if test == correctAnswer {
                         continue
+//                        print("***********************OOPS!!!!!!!!!!!!!")
+//                        if i < self.myWordArray.count-1 {
+//                            print("i<")
+//                            test = self.myWordArray[randomNumber+1].japaneseWord
+//                        } else if i == self.myWordArray.count {
+//                            print("i==")
+//                            test = self.myWordArray[randomNumber-1].japaneseWord
+//                        }
+//                        possibleWrongAnswers.append(test)
+//                        let randomizedWrongAnswer = possibleWrongAnswers.randomElement()
+//                        let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer ?? "")
+//                        self.allQuestions.append(newQuestion)
+//                        print("englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer!) \n")
+//                        print(self.allQuestions.count)
                     } else {
                         possibleWrongAnswers.append(test)
                         let randomizedWrongAnswer = possibleWrongAnswers.randomElement()
