@@ -41,7 +41,7 @@ class JLPT1ViewController: UIViewController {
         let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
         activityIndicatorView = NVActivityIndicatorView(frame: frame)
         activityIndicatorView!.type = .circleStrokeSpin
-        activityIndicatorView!.color = UIColor.cyan
+        activityIndicatorView!.color = UIColor.systemGray3
         self.view.addSubview(activityIndicatorView!)
         activityIndicatorView!.startAnimating()
         button1.isHidden = true
