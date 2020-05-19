@@ -27,14 +27,14 @@ extension JLPT5ViewController {
         
         button1.snp.makeConstraints { (make) in
             make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-120)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-140)
             make.width.equalTo(110)
             make.height.equalTo(80)
         }
         
         button2.snp.makeConstraints { (make) in
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-120)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-140)
             make.width.equalTo(110)
             make.height.equalTo(80)
         }
@@ -66,14 +66,14 @@ extension JLPT1ViewController {
         
         button1.snp.makeConstraints { (make) in
             make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.top.equalTo(questionLabel.snp.bottom).offset(120)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-140)
             make.width.equalTo(110)
             make.height.equalTo(80)
         }
         
         button2.snp.makeConstraints { (make) in
             make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.top.equalTo(questionLabel.snp.bottom).offset(120)
+            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-140)
             make.width.equalTo(110)
             make.height.equalTo(80)
         }

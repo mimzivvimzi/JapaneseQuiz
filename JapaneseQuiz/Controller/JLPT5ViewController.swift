@@ -33,6 +33,10 @@ class JLPT5ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        button1.isHidden = true
+        button2.isHidden = true
+        questionLabel.isHidden = true
+        beginningOfQuestion.isHidden = true
         setUpConstraints()
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
@@ -89,6 +93,10 @@ class JLPT5ViewController: UIViewController {
     
     
     func showQuestion() {
+        button1.isHidden = false
+        button2.isHidden = false
+        questionLabel.isHidden = false
+        beginningOfQuestion.isHidden = false
         if questionNumber < allQuestions.count {
             print("***questionNumber is \(questionNumber)")
             questionLabel.text = allQuestions[questionNumber].question
