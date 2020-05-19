@@ -33,7 +33,7 @@ class JLPT5ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpConstraints()  
+        setUpConstraints()
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
@@ -58,7 +58,7 @@ class JLPT5ViewController: UIViewController {
                         print(englishWord)
                         let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
                         self.myWordArray.append(myWord)
-                        print("myWordArray is \(self.myWordArray)")
+//                        print("myWordArray is \(self.myWordArray)")
 //                        print(dataBranch.count)
                     }
                 
@@ -68,33 +68,17 @@ class JLPT5ViewController: UIViewController {
                     print("englishQuestion is \(englishQuestion)")
                     let correctAnswer = self.myWordArray[i].japaneseWord
                     print("correctAnswer is \(correctAnswer)")
-                    let randomNumber = Int.random(in: 0..<self.myWordArray.count)
-                    var test = self.myWordArray[randomNumber].japaneseWord
+                    var randomNumber: Int?
+                    repeat {
+                        randomNumber = Int.random(in: 0..<self.myWordArray.count)
+                    } while randomNumber == i
+                    let test = self.myWordArray[randomNumber!].japaneseWord
                     print("test is \(test)")
-                    if test == correctAnswer {
-                        continue
-//                        print("***********************OOPS!!!!!!!!!!!!!")
-//                        if i < self.myWordArray.count-1 {
-//                            print("i<")
-//                            test = self.myWordArray[randomNumber+1].japaneseWord
-//                        } else if i == self.myWordArray.count {
-//                            print("i==")
-//                            test = self.myWordArray[randomNumber-1].japaneseWord
-//                        }
-//                        possibleWrongAnswers.append(test)
-//                        let randomizedWrongAnswer = possibleWrongAnswers.randomElement()
-//                        let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer ?? "")
-//                        self.allQuestions.append(newQuestion)
-//                        print("englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer!) \n")
-//                        print(self.allQuestions.count)
-                    } else {
-                        possibleWrongAnswers.append(test)
-                        let randomizedWrongAnswer = possibleWrongAnswers.randomElement()
-                        let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer ?? "")
-                        self.allQuestions.append(newQuestion)
-                        print("englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer!) \n")
-                        print(self.allQuestions.count)
-                    }
+                    possibleWrongAnswers.append(test)
+                    let randomizedWrongAnswer = possibleWrongAnswers[i]
+                    let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer)
+                    self.allQuestions.append(newQuestion)
+                    print("****** englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer) \n")
                 }
                 self.showQuestion()
             case .failure(let error):
