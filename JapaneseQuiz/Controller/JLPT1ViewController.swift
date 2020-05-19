@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import NVActivityIndicatorView
 
 class JLPT1ViewController: UIViewController {
 
@@ -31,8 +32,18 @@ class JLPT1ViewController: UIViewController {
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
     
+    var activityIndicatorView: NVActivityIndicatorView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let x = view.center.x
+        let y = view.center.y
+        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
+        activityIndicatorView = NVActivityIndicatorView(frame: frame)
+        activityIndicatorView!.type = .circleStrokeSpin
+        activityIndicatorView!.color = UIColor.cyan
+        self.view.addSubview(activityIndicatorView!)
+        activityIndicatorView!.startAnimating()
         button1.isHidden = true
         button2.isHidden = true
         questionLabel.isHidden = true
@@ -92,6 +103,7 @@ class JLPT1ViewController: UIViewController {
     
     
     func showQuestion() {
+        activityIndicatorView!.stopAnimating()
         button1.isHidden = false
         button2.isHidden = false
         questionLabel.isHidden = false

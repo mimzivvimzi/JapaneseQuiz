@@ -9,6 +9,8 @@ target 'JapaneseQuiz' do
     pod 'SwiftyJSON', '~> 4.0'
     pod 'Alamofire', '~> 5.1'
     pod 'SnapKit', '~> 5.0.0'
+    pod 'NVActivityIndicatorView'
+
 
 
 
