@@ -38,7 +38,7 @@
                                     <color key="titleColor" red="0.084101609885692596" green="0.28723239898681641" blue="0.37002524733543396" alpha="0.82074120930000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8j-zM-P9r"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAS-ze-vCb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hey-4g-DUo">
@@ -57,7 +57,7 @@
                                     <color key="titleColor" red="0.084101609885692596" green="0.28723239898681641" blue="0.37002524733543396" alpha="0.82074120926530392" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ME5-1Y-uBl"/>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rxl-Py-LRo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -83,6 +83,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vx8-hU-sQK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zvg-8P-rlD">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -126,7 +127,7 @@
                                     <color key="titleColor" red="0.084101609889999998" green="0.28723239900000003" blue="0.37002524730000003" alpha="0.82074120930000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="button2Pressed:" destination="7SX-kg-fnC" eventType="touchUpInside" id="kvC-Eg-r4n"/>
+                                    <action selector="buttonPressed:" destination="7SX-kg-fnC" eventType="touchUpInside" id="Thh-3F-IE3"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="label" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fM2-YM-kxE">
@@ -145,7 +146,7 @@
                                     <color key="titleColor" red="0.084101609889999998" green="0.28723239900000003" blue="0.37002524730000003" alpha="0.82074120930000005" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="button1Pressed:" destination="7SX-kg-fnC" eventType="touchUpInside" id="doK-BL-vHD"/>
+                                    <action selector="buttonPressed:" destination="7SX-kg-fnC" eventType="touchUpInside" id="HFj-9Y-r3m"/>
                                 </connections>
                             </button>
                         </subviews>

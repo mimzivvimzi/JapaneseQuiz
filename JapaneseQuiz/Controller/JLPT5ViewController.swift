@@ -42,7 +42,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
         activityIndicatorView = NVActivityIndicatorView(frame: frame)
         activityIndicatorView!.type = .circleStrokeSpin
-        activityIndicatorView!.color = UIColor.systemGray3
+        activityIndicatorView!.color = UIColor.systemGray6
         self.view.addSubview(activityIndicatorView!)
         activityIndicatorView!.startAnimating()
         button1.isHidden = true
@@ -55,7 +55,6 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         makeAPICall()
         score = 0
-        
     }
     
     func makeAPICall() {
@@ -66,7 +65,6 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
                 guard let value = response.value else { return }
                     let json = JSON(value)
                     let dataBranch = json["data"]
-//                    print(json)
                     for i in 0..<dataBranch.count {
                         let japaneseWord = json["data"][i]["japanese"][0]["word"].stringValue
                         let englishWord = json["data"][i]["senses"][0]["english_definitions"][0].stringValue
@@ -74,8 +72,6 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
                         print(englishWord)
                         let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
                         self.myWordArray.append(myWord)
-//                        print("myWordArray is \(self.myWordArray)")
-//                        print(dataBranch.count)
                     }
                 
                 var possibleWrongAnswers = [String]()
@@ -102,7 +98,6 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
             }
         }
     }
-    
     
     func showQuestion() {
         activityIndicatorView!.stopAnimating()
@@ -144,28 +139,24 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         return randomNumberForCorrectAnswer!
     }
 
-    @IBAction func button1Pressed(_ sender: UIButton) {
+    @IBAction func buttonPressed(_ sender: UIButton) {
         guard allQuestions.count > questionNumber else { return }
         let correctAnswer = allQuestions[questionNumber].correctAnswer
-        if button1.currentTitle == correctAnswer {
-            print("Correct")
-            addToScore()
-        } else {
-            print("Wrong")
-        }
-        questionNumber += 1
-        print("questionNumber is \(questionNumber)")
-        showQuestion()
-    }
-    
-    @IBAction func button2Pressed(_ sender: UIButton) {
-        guard allQuestions.count > questionNumber else { return }
-        let correctAnswer = allQuestions[questionNumber].correctAnswer
-        if button2.currentTitle == correctAnswer {
-            print("Correct")
-            addToScore()
-        } else {
-            print("Wrong")
+
+        if sender.tag == 1 {
+            if button1.currentTitle == correctAnswer {
+                print("Correct")
+                addToScore()
+            } else {
+                print("Wrong")
+            }
+        } else if sender.tag == 2 {
+            if button2.currentTitle == correctAnswer {
+                print("Correct")
+                addToScore()
+            } else {
+                print("Wrong")
+            }
         }
         questionNumber += 1
         print("questionNumber is \(questionNumber)")
