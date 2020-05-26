@@ -146,16 +146,20 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         if sender.tag == 1 {
             if button1.currentTitle == correctAnswer {
                 print("Correct")
+                showCorrectOrWrong(correct: true)
                 addToScore()
             } else {
                 print("Wrong")
+                showCorrectOrWrong(correct: false)
             }
         } else if sender.tag == 2 {
             if button2.currentTitle == correctAnswer {
+                showCorrectOrWrong(correct: true)
                 print("Correct")
                 addToScore()
             } else {
                 print("Wrong")
+                showCorrectOrWrong(correct: false)
             }
         }
         questionNumber += 1
@@ -171,6 +175,21 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
 
     func addToScore() {
         score += 1
+    }
+    
+    func showCorrectOrWrong(correct: Bool) {
+        let hudView = HudView.hud(inView: view, animated: true)
+        if correct {
+            hudView.image = UIImage(named: "correct")
+            hudView.text = "Correct!"
+        } else {
+            hudView.image = UIImage(named: "wrong")
+            hudView.text = "Wrong!"
+        }
+        let delayInSeconds = 0.6
+        DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
+            hudView.hide()
+        }
     }
 }
 
