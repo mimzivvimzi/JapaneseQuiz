@@ -11,6 +11,7 @@ import UIKit
 class HudView: UIView {
     var text = ""
     var image : UIImage?
+    var color: UIColor?
     
     class func hud(inView view: UIView, animated: Bool) -> HudView {
         let hudView = HudView(frame: view.bounds)
@@ -35,7 +36,9 @@ class HudView: UIView {
             height: boxHeight)
         
         let roundedRect = UIBezierPath(roundedRect: boxRect, cornerRadius: 20)
-        UIColor(white: 0.5, alpha: 0.8).setFill()
+        UIColor(hue: 0.3306, saturation: 0.56, brightness: 0.77, alpha: 0.8).setFill()
+//        UIColor(hue: 0, saturation: 0.65, brightness: 1, alpha: 0.8).setFill()
+//        UIColor(white: 0.5, alpha: 0.8).setFill()
         roundedRect.fill()
         
         // DRAW CHECKMARK
