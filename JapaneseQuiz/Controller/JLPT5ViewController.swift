@@ -182,9 +182,11 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         if correct {
             hudView.image = UIImage(named: "correct")
             hudView.text = "Correct!"
+            hudView.color = UIColor(hue: 0.3306, saturation: 0.56, brightness: 0.77, alpha: 0.8)
         } else {
             hudView.image = UIImage(named: "wrong")
             hudView.text = "Wrong!"
+            hudView.color = UIColor(hue: 0, saturation: 0.65, brightness: 1, alpha: 0.8)
         }
         let delayInSeconds = 0.6
         DispatchQueue.main.asyncAfter(deadline: .now() + delayInSeconds) {
