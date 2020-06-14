@@ -16,10 +16,25 @@
 		690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */; };
 		690585C0246D3C6000CBBF7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585BF246D3C6000CBBF7C /* Question.swift */; };
 		697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697027702473DB17003D4543 /* JLPT1ViewController.swift */; };
+		6989C8812495D9A100D5EDCA /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8802495D9A100D5EDCA /* WordData.swift */; };
+		6989C8832495DA2800D5EDCA /* PerformAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8822495DA2800D5EDCA /* PerformAPICall.swift */; };
+		6989C88B2495DAE900D5EDCA /* JapaneseQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C88A2495DAE900D5EDCA /* JapaneseQuizTests.swift */; };
+		6989C8952495F22500D5EDCA /* UnitTestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 6989C8942495F22500D5EDCA /* UnitTestJSON.json */; };
+		6989C8972495F37400D5EDCA /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8962495F37400D5EDCA /* JSONTest.swift */; };
 		69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D190692472BA350041BA29 /* ViewController+Constraints.swift */; };
 		69D4A35A247D5739002EFB5C /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4A359247D5739002EFB5C /* HudView.swift */; };
 		69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F677BB246EBEF700A35BC0 /* JishoWords.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6989C88D2495DAE900D5EDCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 690585A0246D2E2B00CBBF7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 690585A7246D2E2B00CBBF7C;
+			remoteInfo = JapaneseQuiz;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		535CEAAD20D7CDD1298EF1AF /* Pods_JapaneseQuiz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JapaneseQuiz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +48,13 @@
 		690585B9246D2E2F00CBBF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690585BF246D3C6000CBBF7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		697027702473DB17003D4543 /* JLPT1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT1ViewController.swift; sourceTree = "<group>"; };
+		6989C8802495D9A100D5EDCA /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
+		6989C8822495DA2800D5EDCA /* PerformAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformAPICall.swift; sourceTree = "<group>"; };
+		6989C8882495DAE900D5EDCA /* JapaneseQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaneseQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6989C88A2495DAE900D5EDCA /* JapaneseQuizTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JapaneseQuizTests.swift; sourceTree = "<group>"; };
+		6989C88C2495DAE900D5EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6989C8942495F22500D5EDCA /* UnitTestJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnitTestJSON.json; sourceTree = "<group>"; };
+		6989C8962495F37400D5EDCA /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
 		69D190692472BA350041BA29 /* ViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Constraints.swift"; sourceTree = "<group>"; };
 		69D4A359247D5739002EFB5C /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		69F677BB246EBEF700A35BC0 /* JishoWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JishoWords.swift; sourceTree = "<group>"; };
@@ -46,6 +68,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3147CB4366518EDC88DECA18 /* Pods_JapaneseQuiz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6989C8852495DAE900D5EDCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				690585AA246D2E2C00CBBF7C /* JapaneseQuiz */,
+				6989C8892495DAE900D5EDCA /* JapaneseQuizTests */,
 				690585A9246D2E2C00CBBF7C /* Products */,
 				196773F880D58FA7271EBA3C /* Pods */,
 				AF2007A98AF318824468083A /* Frameworks */,
@@ -75,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				690585A8246D2E2C00CBBF7C /* JapaneseQuiz.app */,
+				6989C8882495DAE900D5EDCA /* JapaneseQuizTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -88,6 +119,7 @@
 				690585C4246D3CFE00CBBF7C /* View */,
 				690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */,
 				690585B9246D2E2F00CBBF7C /* Info.plist */,
+				6989C8822495DA2800D5EDCA /* PerformAPICall.swift */,
 			);
 			path = JapaneseQuiz;
 			sourceTree = "<group>";
@@ -97,6 +129,7 @@
 			children = (
 				690585BF246D3C6000CBBF7C /* Question.swift */,
 				69F677BB246EBEF700A35BC0 /* JishoWords.swift */,
+				6989C8802495D9A100D5EDCA /* WordData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +153,17 @@
 				69D4A359247D5739002EFB5C /* HudView.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		6989C8892495DAE900D5EDCA /* JapaneseQuizTests */ = {
+			isa = PBXGroup;
+			children = (
+				6989C88A2495DAE900D5EDCA /* JapaneseQuizTests.swift */,
+				6989C8962495F37400D5EDCA /* JSONTest.swift */,
+				6989C8942495F22500D5EDCA /* UnitTestJSON.json */,
+				6989C88C2495DAE900D5EDCA /* Info.plist */,
+			);
+			path = JapaneseQuizTests;
 			sourceTree = "<group>";
 		};
 		AF2007A98AF318824468083A /* Frameworks */ = {
@@ -152,6 +196,24 @@
 			productReference = 690585A8246D2E2C00CBBF7C /* JapaneseQuiz.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6989C8872495DAE900D5EDCA /* JapaneseQuizTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6989C88F2495DAE900D5EDCA /* Build configuration list for PBXNativeTarget "JapaneseQuizTests" */;
+			buildPhases = (
+				6989C8842495DAE900D5EDCA /* Sources */,
+				6989C8852495DAE900D5EDCA /* Frameworks */,
+				6989C8862495DAE900D5EDCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6989C88E2495DAE900D5EDCA /* PBXTargetDependency */,
+			);
+			name = JapaneseQuizTests;
+			productName = JapaneseQuizTests;
+			productReference = 6989C8882495DAE900D5EDCA /* JapaneseQuizTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -164,6 +226,10 @@
 				TargetAttributes = {
 					690585A7246D2E2B00CBBF7C = {
 						CreatedOnToolsVersion = 11.4;
+					};
+					6989C8872495DAE900D5EDCA = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = 690585A7246D2E2B00CBBF7C;
 					};
 				};
 			};
@@ -181,6 +247,7 @@
 			projectRoot = "";
 			targets = (
 				690585A7246D2E2B00CBBF7C /* JapaneseQuiz */,
+				6989C8872495DAE900D5EDCA /* JapaneseQuizTests */,
 			);
 		};
 /* End PBXProject section */
@@ -193,6 +260,14 @@
 				690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */,
 				690585B5246D2E2F00CBBF7C /* Assets.xcassets in Resources */,
 				690585B3246D2E2C00CBBF7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6989C8862495DAE900D5EDCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6989C8952495F22500D5EDCA /* UnitTestJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,14 +324,33 @@
 				697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */,
 				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
 				69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */,
+				6989C8832495DA2800D5EDCA /* PerformAPICall.swift in Sources */,
 				69D4A35A247D5739002EFB5C /* HudView.swift in Sources */,
 				690585C0246D3C6000CBBF7C /* Question.swift in Sources */,
 				690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */,
 				690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */,
+				6989C8812495D9A100D5EDCA /* WordData.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6989C8842495DAE900D5EDCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6989C88B2495DAE900D5EDCA /* JapaneseQuizTests.swift in Sources */,
+				6989C8972495F37400D5EDCA /* JSONTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6989C88E2495DAE900D5EDCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 690585A7246D2E2B00CBBF7C /* JapaneseQuiz */;
+			targetProxy = 6989C88D2495DAE900D5EDCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		690585B1246D2E2C00CBBF7C /* Main.storyboard */ = {
@@ -428,6 +522,44 @@
 			};
 			name = Release;
 		};
+		6989C8902495DAE900D5EDCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JapaneseQuizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelleLau.JapaneseQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaneseQuiz.app/JapaneseQuiz";
+			};
+			name = Debug;
+		};
+		6989C8912495DAE900D5EDCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = JapaneseQuizTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichelleLau.JapaneseQuizTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JapaneseQuiz.app/JapaneseQuiz";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -445,6 +577,15 @@
 			buildConfigurations = (
 				690585BD246D2E2F00CBBF7C /* Debug */,
 				690585BE246D2E2F00CBBF7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6989C88F2495DAE900D5EDCA /* Build configuration list for PBXNativeTarget "JapaneseQuizTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6989C8902495DAE900D5EDCA /* Debug */,
+				6989C8912495DAE900D5EDCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
