@@ -10,8 +10,8 @@ import XCTest
 @testable import JapaneseQuiz
 
 class JSONTest: XCTestCase {
-
-    func testLaunchDecoding() {
+    
+    func test_decoded_data() {
 //        var wordDataArray = [Word]()
 //        var allQuestions = [Question]()
         
@@ -22,9 +22,14 @@ class JSONTest: XCTestCase {
         }
         let decoder = JSONDecoder()
         guard let decodedData = try? decoder.decode(WordData.self, from: data) else {
-            return
+            return 
         }
         XCTAssertNotNil(decodedData)
+        
+        let firstElement = decodedData.data[0].slug
+
+        XCTAssertEqual(firstElement, "学校")
+        
 //        for i in 0..<decodedData.data.count {
 //            let englishWord = decodedData.data[i].senses[0].englishDefinitions[0]
 //            let japaneseWord = decodedData.data[i].slug
