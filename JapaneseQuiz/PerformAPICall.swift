@@ -8,7 +8,8 @@
 
 import Foundation
 
-func performRequest(with urlString: String) {
+
+func performRequest(with urlString: String, completion: @escaping (Data) -> Void) {
     if let url = URL(string: urlString) {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -17,7 +18,9 @@ func performRequest(with urlString: String) {
                 return
             }
             if let safeData = data {
-                _ = parseJSON(safeData)
+                print("performRequest reached")
+                completion(safeData)
+//                _ = parseJSON(safeData)
             }
         }
         task.resume()
@@ -30,6 +33,7 @@ func parseJSON(_ data: Data) {
     var allQuestions = [Question]()
     do {
         let decodedData = try decoder.decode(WordData.self, from: data)
+        print("decodedData reached")
         for i in 0..<decodedData.data.count {
             let englishWord = decodedData.data[i].senses[0].englishDefinitions[0]
             let japaneseWord = decodedData.data[i].slug
@@ -56,4 +60,7 @@ func parseJSON(_ data: Data) {
         print(error)
     }
 }
+
+
+
 

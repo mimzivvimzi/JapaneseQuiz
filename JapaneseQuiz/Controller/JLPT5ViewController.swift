@@ -37,24 +37,44 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = view.center.x
-        let y = view.center.y
-        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
-        activityIndicatorView = NVActivityIndicatorView(frame: frame)
-        activityIndicatorView!.type = .circleStrokeSpin
-        activityIndicatorView!.color = UIColor.systemGray6
-        self.view.addSubview(activityIndicatorView!)
-        activityIndicatorView!.startAnimating()
-        button1.isHidden = true
-        button2.isHidden = true
-        questionLabel.isHidden = true
-        beginningOfQuestion.isHidden = true
+//        button1.isHidden = true
+//        button2.isHidden = true
+//        questionLabel.isHidden = true
+//        beginningOfQuestion.isHidden = true
         setUpConstraints()
-        button1.layer.cornerRadius = 20
-        button2.layer.cornerRadius = 20
-        self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
-        makeAPICall()
-        score = 0
+//        button1.layer.cornerRadius = 20
+//        button2.layer.cornerRadius = 20
+//        self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
+//        makeAPICall()
+        let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
+        performRequest(with: url) { (completion) in
+            parseJSON(completion)
+        }
+//        showQuestion()
+//        score = 0
+
+        
+//        parseJSON(data) { (success) in
+//            if success {
+//                button1.isHidden = false
+//                button2.isHidden = false
+//                questionLabel.isHidden = false
+//                beginningOfQuestion.isHidden = false
+//            } else {
+//
+//            }
+//        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        let x = view.center.x
+//        let y = view.center.y
+//        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
+//        activityIndicatorView = NVActivityIndicatorView(frame: frame)
+//        activityIndicatorView!.type = .circleStrokeSpin
+//        activityIndicatorView!.color = UIColor.systemGray6
+//        self.view.addSubview(activityIndicatorView!)
+//        activityIndicatorView!.startAnimating()
     }
     
     func makeAPICall() {
@@ -73,7 +93,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
                         let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
                         self.myWordArray.append(myWord)
                     }
-                
+
                 var possibleWrongAnswers = [String]()
                 for i in 0..<self.myWordArray.count {
                     let englishQuestion = self.myWordArray[i].englishWord
@@ -92,7 +112,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
                     self.allQuestions.append(newQuestion)
                     print("****** englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer) \n")
                 }
-                self.showQuestion()
+//                self.showQuestion()
             case .failure(let error):
                 print(error.localizedDescription)
             }
@@ -100,7 +120,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     func showQuestion() {
-        activityIndicatorView!.stopAnimating()
+//        activityIndicatorView!.stopAnimating()
         button1.isHidden = false
         button2.isHidden = false
         questionLabel.isHidden = false
@@ -164,13 +184,13 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         }
         questionNumber += 1
         print("questionNumber is \(questionNumber)")
-        showQuestion()
+//        showQuestion()
     }
     
     func startOver() {
         questionNumber = 0
         score = 0
-        showQuestion()
+//        showQuestion()
     }
 
     func addToScore() {
