@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 import NVActivityIndicatorView
 
 
@@ -37,70 +35,37 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = view.center.x
-        let y = view.center.y
-        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
-        activityIndicatorView = NVActivityIndicatorView(frame: frame)
-        activityIndicatorView!.type = .circleStrokeSpin
-        activityIndicatorView!.color = UIColor.systemGray6
-        self.view.addSubview(activityIndicatorView!)
-        activityIndicatorView!.startAnimating()
-        button1.isHidden = true
-        button2.isHidden = true
-        questionLabel.isHidden = true
-        beginningOfQuestion.isHidden = true
+//        button1.isHidden = true
+//        button2.isHidden = true
+//        questionLabel.isHidden = true
+//        beginningOfQuestion.isHidden = true
         setUpConstraints()
-        button1.layer.cornerRadius = 20
-        button2.layer.cornerRadius = 20
+//        button1.layer.cornerRadius = 20
+//        button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
-        makeAPICall()
-        score = 0
-    }
-    
-    func makeAPICall() {
-        let url = URL(string: "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5")!
-        AF.request(url).validate().responseJSON { (response) in
-            switch response.result {
-            case .success(_):
-                guard let value = response.value else { return }
-                    let json = JSON(value)
-                    let dataBranch = json["data"]
-                    for i in 0..<dataBranch.count {
-                        let japaneseWord = json["data"][i]["japanese"][0]["word"].stringValue
-                        let englishWord = json["data"][i]["senses"][0]["english_definitions"][0].stringValue
-                        print(japaneseWord)
-                        print(englishWord)
-                        let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
-                        self.myWordArray.append(myWord)
-                    }
-                
-                var possibleWrongAnswers = [String]()
-                for i in 0..<self.myWordArray.count {
-                    let englishQuestion = self.myWordArray[i].englishWord
-                    print("englishQuestion is \(englishQuestion)")
-                    let correctAnswer = self.myWordArray[i].japaneseWord
-                    print("correctAnswer is \(correctAnswer)")
-                    var randomNumber: Int?
-                    repeat {
-                        randomNumber = Int.random(in: 0..<self.myWordArray.count)
-                    } while randomNumber == i
-                    let test = self.myWordArray[randomNumber!].japaneseWord
-                    print("test is \(test)")
-                    possibleWrongAnswers.append(test)
-                    let randomizedWrongAnswer = possibleWrongAnswers[i]
-                    let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer)
-                    self.allQuestions.append(newQuestion)
-                    print("****** englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer) \n")
-                }
+//        makeAPICall()
+        let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
+        performRequest(with: url) { (questions) in
+            DispatchQueue.main.async {
+                self.allQuestions = questions
                 self.showQuestion()
-            case .failure(let error):
-                print(error.localizedDescription)
             }
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+//        let x = view.center.x
+//        let y = view.center.y
+//        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
+//        activityIndicatorView = NVActivityIndicatorView(frame: frame)
+//        activityIndicatorView!.type = .circleStrokeSpin
+//        activityIndicatorView!.color = UIColor.systemGray6
+//        self.view.addSubview(activityIndicatorView!)
+//        activityIndicatorView!.startAnimating()
+    }
+    
     func showQuestion() {
-        activityIndicatorView!.stopAnimating()
+//        activityIndicatorView!.stopAnimating()
         button1.isHidden = false
         button2.isHidden = false
         questionLabel.isHidden = false

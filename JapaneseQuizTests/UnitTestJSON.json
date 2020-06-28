@@ -1,0 +1,298 @@
+{
+"data" : [
+  {
+    "slug" : "学校",
+    "senses" : [
+      {
+        "links" : [
+
+        ],
+        "english_definitions" : [
+          "school"
+        ],
+        "source" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "restrictions" : [
+
+        ],
+        "info" : [
+
+        ],
+        "see_also" : [
+
+        ],
+        "antonyms" : [
+
+        ],
+        "parts_of_speech" : [
+          "Noun"
+        ]
+      },
+      {
+        "english_definitions" : [
+          "Gakkou"
+        ],
+        "source" : [
+
+        ],
+        "info" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "links" : [
+
+        ],
+        "parts_of_speech" : [
+          "Place"
+        ],
+        "restrictions" : [
+
+        ],
+        "see_also" : [
+
+        ],
+        "antonyms" : [
+
+        ]
+      },
+      {
+        "sentences" : [
+
+        ],
+        "english_definitions" : [
+          "School"
+        ],
+        "source" : [
+
+        ],
+        "info" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "links" : [
+          {
+            "text" : "Read “School” on English Wikipedia",
+            "url" : "http"
+          },
+          {
+            "text" : "Read “学校” on Japanese Wikipedia",
+            "url" : "http"
+          }
+        ],
+        "parts_of_speech" : [
+          "Wikipedia definition"
+        ],
+        "restrictions" : [
+
+        ],
+        "see_also" : [
+
+        ],
+        "antonyms" : [
+
+        ]
+      }
+    ],
+    "jlpt" : [
+      "jlpt-n5"
+    ],
+    "attribution" : {
+      "jmdict" : true,
+      "dbpedia" : "http",
+      "jmnedict" : true
+    },
+    "tags" : [
+      "wanikani7"
+    ],
+    "is_common" : true,
+    "japanese" : [
+      {
+        "reading" : "がっこう",
+        "word" : "学校"
+      },
+      {
+        "reading" : "がっこう",
+        "word" : "學校"
+      }
+    ]
+  },
+  {
+    "jlpt" : [
+      "jlpt-n3",
+      "jlpt-n5"
+    ],
+    "is_common" : true,
+    "slug" : "川",
+    "attribution" : {
+      "jmdict" : true,
+      "dbpedia" : "http",
+      "jmnedict" : true
+    },
+    "senses" : [
+      {
+        "antonyms" : [
+
+        ],
+        "english_definitions" : [
+          "river",
+          "stream"
+        ],
+        "info" : [
+
+        ],
+        "restrictions" : [
+          "かわ"
+        ],
+        "tags" : [
+
+        ],
+        "parts_of_speech" : [
+          "Noun"
+        ],
+        "see_also" : [
+
+        ],
+        "source" : [
+
+        ],
+        "links" : [
+
+        ]
+      },
+      {
+        "antonyms" : [
+
+        ],
+        "english_definitions" : [
+          "River",
+          "the ... river"
+        ],
+        "info" : [
+          "suffix used with the names of rivers"
+        ],
+        "restrictions" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "parts_of_speech" : [
+          "Suffix"
+        ],
+        "see_also" : [
+
+        ],
+        "source" : [
+
+        ],
+        "links" : [
+
+        ]
+      },
+      {
+        "antonyms" : [
+
+        ],
+        "english_definitions" : [
+          "Gawa"
+        ],
+        "info" : [
+
+        ],
+        "restrictions" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "parts_of_speech" : [
+          "Place"
+        ],
+        "see_also" : [
+
+        ],
+        "source" : [
+
+        ],
+        "links" : [
+
+        ]
+      },
+      {
+        "sentences" : [
+
+        ],
+        "antonyms" : [
+
+        ],
+        "english_definitions" : [
+          "River"
+        ],
+        "info" : [
+
+        ],
+        "restrictions" : [
+
+        ],
+        "tags" : [
+
+        ],
+        "parts_of_speech" : [
+          "Wikipedia definition"
+        ],
+        "see_also" : [
+
+        ],
+        "source" : [
+
+        ],
+        "links" : [
+          {
+            "text" : "Read “River” on English Wikipedia",
+            "url" : "http:"
+          },
+          {
+            "text" : "Read “川” on Japanese Wikipedia",
+            "url" : "http:"
+          }
+        ]
+      }
+    ],
+    "tags" : [
+      "wanikani1",
+      "wanikani26"
+    ],
+    "japanese" : [
+      {
+        "reading" : "かわ",
+        "word" : "川"
+      },
+      {
+        "reading" : "がわ",
+        "word" : "川"
+      },
+      {
+        "reading" : "かわ",
+        "word" : "河"
+      },
+      {
+        "reading" : "がわ",
+        "word" : "河"
+        }
+      ]
+    }
+  ],
+  "meta" : {
+    "status" : 200
+  }
+}
+
+
