@@ -7,8 +7,6 @@
 //
 
 import UIKit
-import SwiftyJSON
-import Alamofire
 import NVActivityIndicatorView
 
 
@@ -65,48 +63,6 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
 //        self.view.addSubview(activityIndicatorView!)
 //        activityIndicatorView!.startAnimating()
     }
-    
-//    func makeAPICall() {
-//        let url = URL(string: "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5")!
-//        AF.request(url).validate().responseJSON { (response) in
-//            switch response.result {
-//            case .success(_):
-//                guard let value = response.value else { return }
-//                    let json = JSON(value)
-//                    let dataBranch = json["data"]
-//                    for i in 0..<dataBranch.count {
-//                        let japaneseWord = json["data"][i]["japanese"][0]["word"].stringValue
-//                        let englishWord = json["data"][i]["senses"][0]["english_definitions"][0].stringValue
-//                        print(japaneseWord)
-//                        print(englishWord)
-//                        let myWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
-//                        self.myWordArray.append(myWord)
-//                    }
-//
-//                var possibleWrongAnswers = [String]()
-//                for i in 0..<self.myWordArray.count {
-//                    let englishQuestion = self.myWordArray[i].englishWord
-//                    print("englishQuestion is \(englishQuestion)")
-//                    let correctAnswer = self.myWordArray[i].japaneseWord
-//                    print("correctAnswer is \(correctAnswer)")
-//                    var randomNumber: Int?
-//                    repeat {
-//                        randomNumber = Int.random(in: 0..<self.myWordArray.count)
-//                    } while randomNumber == i
-//                    let test = self.myWordArray[randomNumber!].japaneseWord
-//                    print("test is \(test)")
-//                    possibleWrongAnswers.append(test)
-//                    let randomizedWrongAnswer = possibleWrongAnswers[i]
-//                    let newQuestion = Question(question: englishQuestion, correctAnswer: correctAnswer, wrongAnswer: randomizedWrongAnswer)
-//                    self.allQuestions.append(newQuestion)
-//                    print("****** englishQuestion is \(englishQuestion), correctAnswer is \(correctAnswer), and randomizedWrongAnswer is \(randomizedWrongAnswer) \n")
-//                }
-////                self.showQuestion()
-//            case .failure(let error):
-//                print(error.localizedDescription)
-//            }
-//        }
-//    }
     
     func showQuestion() {
 //        activityIndicatorView!.stopAnimating()
