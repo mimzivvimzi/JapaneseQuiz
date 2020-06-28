@@ -9,7 +9,7 @@
 import Foundation
 
 
-func performRequest(with urlString: String, completion: @escaping (Data) -> Void) {
+func performRequest(with urlString: String, completion: @escaping ([Question]) -> Void) {
     if let url = URL(string: urlString) {
         let session = URLSession(configuration: .default)
         let task = session.dataTask(with: url) { (data, response, error) in
@@ -19,15 +19,16 @@ func performRequest(with urlString: String, completion: @escaping (Data) -> Void
             }
             if let safeData = data {
                 print("performRequest reached")
-                completion(safeData)
-//                _ = parseJSON(safeData)
+//                completion(safeData)
+                let questions = parseJSON(safeData)
+                completion(questions)
             }
         }
         task.resume()
     }
 }
 
-func parseJSON(_ data: Data) {
+func parseJSON(_ data: Data) -> [Question] {
     let decoder = JSONDecoder()
     var wordDataArray = [Word]()
     var allQuestions = [Question]()
@@ -39,26 +40,27 @@ func parseJSON(_ data: Data) {
             let japaneseWord = decodedData.data[i].slug
             let newWord = Word(japaneseWord: japaneseWord, englishWord: englishWord)
             wordDataArray.append(newWord)
-            
-            var possibleWrongAnswers = [String]()
-            for i in 0..<wordDataArray.count {
-                let englishQuestion = wordDataArray[i].englishWord
-                let japaneseAnswer = wordDataArray[i].japaneseWord
-                var randomNumber: Int?
-                repeat {
-                    randomNumber = Int.random(in: 0..<wordDataArray.count)
-                } while randomNumber == i
-                let wrongAnswer = wordDataArray[randomNumber!].japaneseWord
-                print("wrongAnswer is \(wrongAnswer)")
-                possibleWrongAnswers.append(wrongAnswer)
-                let randomizedWrongAnswer = possibleWrongAnswers[i]
-                let newQuestion = Question(question: englishQuestion, correctAnswer: japaneseAnswer, wrongAnswer: randomizedWrongAnswer)
-                allQuestions.append(newQuestion)
-            }
         }
+        var possibleWrongAnswers = [String]()
+        for i in 0..<wordDataArray.count {
+            let englishQuestion = wordDataArray[i].englishWord
+            let japaneseAnswer = wordDataArray[i].japaneseWord
+            var randomNumber: Int?
+            repeat {
+                randomNumber = Int.random(in: 0..<wordDataArray.count)
+            } while randomNumber == i
+            let wrongAnswer = wordDataArray[randomNumber!].japaneseWord
+            print("wrongAnswer is \(wrongAnswer)")
+            possibleWrongAnswers.append(wrongAnswer)
+            let randomizedWrongAnswer = possibleWrongAnswers[i]
+            let newQuestion = Question(question: englishQuestion, correctAnswer: japaneseAnswer, wrongAnswer: randomizedWrongAnswer)
+            allQuestions.append(newQuestion)
+        }
+        return allQuestions
     } catch {
         print(error)
     }
+    return []
 }
 
 

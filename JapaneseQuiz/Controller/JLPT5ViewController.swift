@@ -47,8 +47,12 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
 //        self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
 //        makeAPICall()
         let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
-        performRequest(with: url) { (completion) in
-            parseJSON(completion)
+        performRequest(with: url) { (questions) in
+            // array of questions
+            DispatchQueue.main.async {
+                self.allQuestions = questions
+                self.showQuestion()
+            }
         }
 //        showQuestion()
 //        score = 0
