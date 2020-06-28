@@ -19,7 +19,6 @@ func performRequest(with urlString: String, completion: @escaping ([Question]) -
             }
             if let safeData = data {
                 print("performRequest reached")
-//                completion(safeData)
                 let questions = parseJSON(safeData)
                 completion(questions)
             }
