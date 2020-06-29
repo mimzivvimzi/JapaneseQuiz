@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import NVActivityIndicatorView
 
 
-class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
+class JLPT5ViewController: UIViewController {
 
     @IBOutlet weak var beginningOfQuestion: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -30,8 +29,8 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     
     var allQuestions = [Question]()
     var myWordArray = [Word]()
-    var activityIndicatorView: NVActivityIndicatorView?
-    
+    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         button1.isHidden = true
@@ -42,6 +41,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
+        showActivityIndicatory(uiView: view)
         let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
         performRequest(with: url) { (questions) in
             DispatchQueue.main.async {
@@ -51,23 +51,18 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-
+    func showActivityIndicatory(uiView: UIView) {
+        actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
+        actInd.center = uiView.center
+        actInd.hidesWhenStopped = true
+        actInd.style =
+            UIActivityIndicatorView.Style.large
+        uiView.addSubview(actInd)
+        actInd.startAnimating()
     }
     
-//    func activityIndicator() {
-//        let x = view.center.x
-//        let y = view.center.y
-//        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
-//        activityIndicatorView = NVActivityIndicatorView(frame: frame)
-//        activityIndicatorView!.type = .circleStrokeSpin
-//        activityIndicatorView!.color = UIColor.systemGray6
-//        self.view.addSubview(activityIndicatorView!)
-//        activityIndicatorView!.startAnimating()
-//    }
-    
     func showQuestion() {
-//        activityIndicatorView!.stopAnimating()
+        actInd.stopAnimating()
         button1.isHidden = false
         button2.isHidden = false
         questionLabel.isHidden = false
