@@ -1,25 +1,20 @@
 //
-//  JLPT1ViewController.swift
+//  JLPT3ViewController.swift
 //  JapaneseQuiz
 //
-//  Created by Michelle Lau on 2020/05/19.
+//  Created by Michelle Lau on 2020/06/29.
 //  Copyright © 2020 Michelle Lau. All rights reserved.
 //
 
 import UIKit
-import NVActivityIndicatorView
 
-class JLPT1ViewController: UIViewController {
+class JLPT3ViewController: UIViewController {
 
     @IBOutlet weak var beginningOfQuestion: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
-    
-    var questionNumber = 0
-    var randomNumberForCorrectAnswer: Int?
-    var randomNumberForWrongAnswer: Int?
     
     var score = 0 {
         didSet {
@@ -29,8 +24,9 @@ class JLPT1ViewController: UIViewController {
     
     var allQuestions = [Question]()
     var myWordArray = [Word]()
-    
-    var activityIndicatorView: NVActivityIndicatorView?
+    var questionNumber = 0
+    var randomNumberForCorrectAnswer: Int?
+    var randomNumberForWrongAnswer: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +38,7 @@ class JLPT1ViewController: UIViewController {
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
-        let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n1"
+        let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n3"
         performRequest(with: url) { (questions) in
             DispatchQueue.main.async {
                 self.allQuestions = questions

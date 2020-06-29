@@ -15,12 +15,15 @@
 		690585B5246D2E2F00CBBF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690585B4246D2E2F00CBBF7C /* Assets.xcassets */; };
 		690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */; };
 		690585C0246D3C6000CBBF7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585BF246D3C6000CBBF7C /* Question.swift */; };
+		693C78FE24AA1C6B00005C24 /* JLPT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */; };
+		693C790024AA1C8000005C24 /* JLPT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */; };
 		697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697027702473DB17003D4543 /* JLPT1ViewController.swift */; };
 		6989C8812495D9A100D5EDCA /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8802495D9A100D5EDCA /* WordData.swift */; };
 		6989C8832495DA2800D5EDCA /* PerformAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8822495DA2800D5EDCA /* PerformAPICall.swift */; };
 		6989C88B2495DAE900D5EDCA /* JapaneseQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C88A2495DAE900D5EDCA /* JapaneseQuizTests.swift */; };
 		6989C8952495F22500D5EDCA /* UnitTestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 6989C8942495F22500D5EDCA /* UnitTestJSON.json */; };
 		6989C8972495F37400D5EDCA /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8962495F37400D5EDCA /* JSONTest.swift */; };
+		69A3C36524A8D59E0020F3A9 /* JLPT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */; };
 		69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D190692472BA350041BA29 /* ViewController+Constraints.swift */; };
 		69D4A35A247D5739002EFB5C /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4A359247D5739002EFB5C /* HudView.swift */; };
 		69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F677BB246EBEF700A35BC0 /* JishoWords.swift */; };
@@ -47,6 +50,8 @@
 		690585B7246D2E2F00CBBF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		690585B9246D2E2F00CBBF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690585BF246D3C6000CBBF7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT3ViewController.swift; sourceTree = "<group>"; };
+		693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT4ViewController.swift; sourceTree = "<group>"; };
 		697027702473DB17003D4543 /* JLPT1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT1ViewController.swift; sourceTree = "<group>"; };
 		6989C8802495D9A100D5EDCA /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		6989C8822495DA2800D5EDCA /* PerformAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformAPICall.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		6989C88C2495DAE900D5EDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6989C8942495F22500D5EDCA /* UnitTestJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UnitTestJSON.json; sourceTree = "<group>"; };
 		6989C8962495F37400D5EDCA /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
+		69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT2ViewController.swift; sourceTree = "<group>"; };
 		69D190692472BA350041BA29 /* ViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Constraints.swift"; sourceTree = "<group>"; };
 		69D4A359247D5739002EFB5C /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		69F677BB246EBEF700A35BC0 /* JishoWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JishoWords.swift; sourceTree = "<group>"; };
@@ -148,6 +154,9 @@
 			children = (
 				690585AB246D2E2C00CBBF7C /* AppDelegate.swift */,
 				690585AF246D2E2C00CBBF7C /* JLPT5ViewController.swift */,
+				693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */,
+				693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */,
+				69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */,
 				697027702473DB17003D4543 /* JLPT1ViewController.swift */,
 				69D190692472BA350041BA29 /* ViewController+Constraints.swift */,
 				69D4A359247D5739002EFB5C /* HudView.swift */,
@@ -320,16 +329,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693C78FE24AA1C6B00005C24 /* JLPT3ViewController.swift in Sources */,
 				690585B0246D2E2C00CBBF7C /* JLPT5ViewController.swift in Sources */,
 				697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */,
 				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
 				69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */,
 				6989C8832495DA2800D5EDCA /* PerformAPICall.swift in Sources */,
+				69A3C36524A8D59E0020F3A9 /* JLPT2ViewController.swift in Sources */,
 				69D4A35A247D5739002EFB5C /* HudView.swift in Sources */,
 				690585C0246D3C6000CBBF7C /* Question.swift in Sources */,
 				690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */,
 				690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */,
 				6989C8812495D9A100D5EDCA /* WordData.swift in Sources */,
+				693C790024AA1C8000005C24 /* JLPT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

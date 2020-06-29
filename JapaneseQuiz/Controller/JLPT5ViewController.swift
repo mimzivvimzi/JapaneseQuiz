@@ -14,11 +14,15 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
 
     @IBOutlet weak var beginningOfQuestion: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var button1: UIButton!
+    @IBOutlet weak var button2: UIButton!
+    
     var questionNumber = 0
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
     
-    var score = -1 {
+    var score = 0 {
         didSet {
             scoreLabel.text = "Score: \(score)"
         }
@@ -26,24 +30,18 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     
     var allQuestions = [Question]()
     var myWordArray = [Word]()
-    
-    @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var button1: UIButton!
-    @IBOutlet weak var button2: UIButton!
-
     var activityIndicatorView: NVActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        button1.isHidden = true
-//        button2.isHidden = true
-//        questionLabel.isHidden = true
-//        beginningOfQuestion.isHidden = true
+        button1.isHidden = true
+        button2.isHidden = true
+        questionLabel.isHidden = true
+        beginningOfQuestion.isHidden = true
         setUpConstraints()
-//        button1.layer.cornerRadius = 20
-//        button2.layer.cornerRadius = 20
+        button1.layer.cornerRadius = 20
+        button2.layer.cornerRadius = 20
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
-//        makeAPICall()
         let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
         performRequest(with: url) { (questions) in
             DispatchQueue.main.async {
@@ -54,6 +52,10 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+
+    }
+    
+//    func activityIndicator() {
 //        let x = view.center.x
 //        let y = view.center.y
 //        let frame = CGRect(x: (x - 50), y: (y - 50), width: 100, height: 100)
@@ -62,7 +64,7 @@ class JLPT5ViewController: UIViewController, NVActivityIndicatorViewable {
 //        activityIndicatorView!.color = UIColor.systemGray6
 //        self.view.addSubview(activityIndicatorView!)
 //        activityIndicatorView!.startAnimating()
-    }
+//    }
     
     func showQuestion() {
 //        activityIndicatorView!.stopAnimating()
