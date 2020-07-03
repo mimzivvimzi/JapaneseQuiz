@@ -40,6 +40,8 @@ class JLPT5ViewController: UIViewController {
         setUpConstraints()
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
+        button1.clipsToBounds = false
+        button2.clipsToBounds = false
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         showActivityIndicatory(uiView: view)
         let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"

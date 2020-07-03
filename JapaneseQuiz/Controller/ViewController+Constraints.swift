@@ -9,151 +9,180 @@
 import UIKit
 import SnapKit
 
+
 extension JLPT5ViewController {
 
     func setUpConstraints() {
+        
+        beginningOfQuestion.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        beginningOfQuestion.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+        beginningOfQuestion.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        beginningOfQuestion.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+        beginningOfQuestion.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+        
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        questionLabel.topAnchor.constraint(equalTo: beginningOfQuestion.bottomAnchor, constant: 70),
+        questionLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+        questionLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        questionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
 
-        beginningOfQuestion.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.centerX.equalToSuperview()
-        }
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        button1.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+        button1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button1.widthAnchor.constraint(equalToConstant: 110),
+        button1.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        questionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(beginningOfQuestion).offset(70)
-            make.leading.trailing.equalTo(beginningOfQuestion)
-            make.centerX.equalToSuperview()
-        }
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+        button2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button2.widthAnchor.constraint(equalToConstant: 110),
+        button2.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        button1.snp.makeConstraints { (make) in
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        button2.snp.makeConstraints { (make) in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        scoreLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(30)
-        }
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+        scoreLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        ])
     }
 }
 
 extension JLPT4ViewController {
-
+    
     func setUpConstraints() {
+        
+        beginningOfQuestion.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        beginningOfQuestion.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+        beginningOfQuestion.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        beginningOfQuestion.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+        beginningOfQuestion.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+        
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        questionLabel.topAnchor.constraint(equalTo: beginningOfQuestion.bottomAnchor, constant: 70),
+        questionLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+        questionLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        questionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
 
-        beginningOfQuestion.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.centerX.equalToSuperview()
-        }
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        button1.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+        button1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button1.widthAnchor.constraint(equalToConstant: 110),
+        button1.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        questionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(beginningOfQuestion).offset(70)
-            make.leading.trailing.equalTo(beginningOfQuestion)
-            make.centerX.equalToSuperview()
-        }
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+        button2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button2.widthAnchor.constraint(equalToConstant: 110),
+        button2.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        button1.snp.makeConstraints { (make) in
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        button2.snp.makeConstraints { (make) in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        scoreLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(30)
-        }
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+        scoreLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        ])
     }
 }
 
 extension JLPT3ViewController {
-
+    
     func setUpConstraints() {
+        
+        beginningOfQuestion.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        beginningOfQuestion.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+        beginningOfQuestion.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        beginningOfQuestion.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+        beginningOfQuestion.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+        
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        questionLabel.topAnchor.constraint(equalTo: beginningOfQuestion.bottomAnchor, constant: 70),
+        questionLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+        questionLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        questionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
 
-        beginningOfQuestion.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.centerX.equalToSuperview()
-        }
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        button1.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+        button1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button1.widthAnchor.constraint(equalToConstant: 110),
+        button1.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        questionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(beginningOfQuestion).offset(70)
-            make.leading.trailing.equalTo(beginningOfQuestion)
-            make.centerX.equalToSuperview()
-        }
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+        button2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button2.widthAnchor.constraint(equalToConstant: 110),
+        button2.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        button1.snp.makeConstraints { (make) in
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        button2.snp.makeConstraints { (make) in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        scoreLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(30)
-        }
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+        scoreLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        ])
     }
 }
 
 extension JLPT2ViewController {
-
+    
     func setUpConstraints() {
+        
+        beginningOfQuestion.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        beginningOfQuestion.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+        beginningOfQuestion.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        beginningOfQuestion.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+        beginningOfQuestion.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+        
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        questionLabel.topAnchor.constraint(equalTo: beginningOfQuestion.bottomAnchor, constant: 70),
+        questionLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+        questionLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        questionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
 
-        beginningOfQuestion.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.centerX.equalToSuperview()
-        }
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        button1.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+        button1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button1.widthAnchor.constraint(equalToConstant: 110),
+        button1.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        questionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(beginningOfQuestion).offset(70)
-            make.leading.trailing.equalTo(beginningOfQuestion)
-            make.centerX.equalToSuperview()
-        }
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+        button2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button2.widthAnchor.constraint(equalToConstant: 110),
+        button2.heightAnchor.constraint(equalToConstant: 80)
+        ])
 
-        button1.snp.makeConstraints { (make) in
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        button2.snp.makeConstraints { (make) in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-
-        scoreLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(30)
-        }
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+        scoreLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        ])
     }
 }
 
@@ -161,35 +190,42 @@ extension JLPT1ViewController {
     
     func setUpConstraints() {
         
-        beginningOfQuestion.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().offset(200)
-            make.leading.trailing.equalToSuperview().inset(30)
-            make.centerX.equalToSuperview()
-        }
+        beginningOfQuestion.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        beginningOfQuestion.topAnchor.constraint(equalTo: view.topAnchor, constant: 200),
+        beginningOfQuestion.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        beginningOfQuestion.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30),
+        beginningOfQuestion.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
         
-        questionLabel.snp.makeConstraints { (make) in
-            make.top.equalTo(beginningOfQuestion).offset(70)
-            make.leading.trailing.equalTo(beginningOfQuestion)
-            make.centerX.equalToSuperview()
-        }
-        
-        button1.snp.makeConstraints { (make) in
-            make.leading.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-        
-        button2.snp.makeConstraints { (make) in
-            make.trailing.equalTo(view.safeAreaLayoutGuide).inset(50)
-            make.bottom.equalTo(view.safeAreaLayoutGuide).offset(-180)
-            make.width.equalTo(110)
-            make.height.equalTo(80)
-        }
-        
-        scoreLabel.snp.makeConstraints { (make) in
-            make.bottom.equalToSuperview().offset(-100)
-            make.leading.equalToSuperview().offset(30)
-        }
+        questionLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        questionLabel.topAnchor.constraint(equalTo: beginningOfQuestion.bottomAnchor, constant: 70),
+        questionLabel.leadingAnchor.constraint(equalTo: view.layoutMarginsGuide.leadingAnchor),
+        questionLabel.trailingAnchor.constraint(equalTo: view.layoutMarginsGuide.trailingAnchor),
+        questionLabel.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor)
+        ])
+
+        button1.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        button1.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+        button1.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button1.widthAnchor.constraint(equalToConstant: 110),
+        button1.heightAnchor.constraint(equalToConstant: 80)
+        ])
+
+        button2.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            button2.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+        button2.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -180),
+        button2.widthAnchor.constraint(equalToConstant: 110),
+        button2.heightAnchor.constraint(equalToConstant: 80)
+        ])
+
+        scoreLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+        scoreLabel.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -30),
+        scoreLabel.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30),
+        ])
     }
 }
