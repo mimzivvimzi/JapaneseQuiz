@@ -29,7 +29,7 @@ class JLPT5ViewController: UIViewController {
     
     var allQuestions = [Question]()
     var myWordArray = [Word]()
-    let actInd: UIActivityIndicatorView = UIActivityIndicatorView()
+    let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class JLPT5ViewController: UIViewController {
         button1.clipsToBounds = false
         button2.clipsToBounds = false
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
-        showActivityIndicatory(uiView: view)
+        showActivityIndicatory(actInd: activityIndicator, uiView: view)
         let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
         performRequest(with: url) { (questions) in
             DispatchQueue.main.async {
@@ -53,18 +53,8 @@ class JLPT5ViewController: UIViewController {
         }
     }
     
-    func showActivityIndicatory(uiView: UIView) {
-        actInd.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0);
-        actInd.center = uiView.center
-        actInd.hidesWhenStopped = true
-        actInd.style =
-            UIActivityIndicatorView.Style.large
-        uiView.addSubview(actInd)
-        actInd.startAnimating()
-    }
-    
     func showQuestion() {
-        actInd.stopAnimating()
+        activityIndicator.stopAnimating()
         button1.isHidden = false
         button2.isHidden = false
         questionLabel.isHidden = false
