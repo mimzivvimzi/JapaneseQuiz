@@ -37,7 +37,7 @@ class JLPT5ViewController: UIViewController {
         button2.isHidden = true
         questionLabel.isHidden = true
         beginningOfQuestion.isHidden = true
-        setUpConstraints()
+        setUpConstraints(beginningOfQuestion: beginningOfQuestion, questionLabel: questionLabel, button1: button1, button2: button2, scoreLabel: scoreLabel, view: view)
         button1.layer.cornerRadius = 20
         button2.layer.cornerRadius = 20
         button1.clipsToBounds = false
