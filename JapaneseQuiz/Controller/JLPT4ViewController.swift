@@ -28,6 +28,8 @@ class JLPT4ViewController: UIViewController {
     var randomNumberForCorrectAnswer: Int?
     var randomNumberForWrongAnswer: Int?
     let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n4"
+    var pageNumber = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +44,6 @@ class JLPT4ViewController: UIViewController {
         button2.clipsToBounds = false
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         showActivityIndicatory(actInd: activityIndicator, uiView: view)
-        let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n4"
         performRequest(with: url) { (questions) in
             DispatchQueue.main.async {
                 self.allQuestions = questions
@@ -61,13 +62,11 @@ class JLPT4ViewController: UIViewController {
             print("***questionNumber is \(questionNumber)")
             questionLabel.text = allQuestions[questionNumber].question
         } else {
-            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions", preferredStyle: .alert)
-
+            let alert = UIAlertController(title: "Awesome", message: "You've finished all the questions.  Ready for the next round?", preferredStyle: .alert)
             let stop = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
             alert.addAction(stop)
-
             present(alert, animated: true, completion: nil)
-            startOver()
+            startNextRound()
         }
 
         let answer = allQuestions[questionNumber].correctAnswer
@@ -119,10 +118,17 @@ class JLPT4ViewController: UIViewController {
         showQuestion()
     }
     
-    func startOver() {
+    func startNextRound() {
         questionNumber = 0
         score = 0
-        showQuestion()
+        pageNumber += 1
+        let newURL = "\(url)&page=\(pageNumber)"
+        performRequest(with: newURL) { (questions) in
+            DispatchQueue.main.async {
+                self.allQuestions = questions
+                self.showQuestion()
+            }
+        }
     }
 
     func addToScore() {
