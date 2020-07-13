@@ -104,6 +104,8 @@
 		6905859F246D2E2B00CBBF7C = {
 			isa = PBXGroup;
 			children = (
+				699E2ECC24BCA3650069B110 /* README.md */,
+				699E2ECD24BCA3D30069B110 /* JapaneseQuiz.gif */,
 				690585AA246D2E2C00CBBF7C /* JapaneseQuiz */,
 				690585A9246D2E2C00CBBF7C /* Products */,
 				196773F880D58FA7271EBA3C /* Pods */,
@@ -133,8 +135,6 @@
 				6989C8822495DA2800D5EDCA /* PerformAPICall.swift */,
 				690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */,
 				690585B9246D2E2F00CBBF7C /* Info.plist */,
-				699E2ECC24BCA3650069B110 /* README.md */,
-				699E2ECD24BCA3D30069B110 /* JapaneseQuiz.gif */,
 			);
 			path = JapaneseQuiz;
 			sourceTree = "<group>";
