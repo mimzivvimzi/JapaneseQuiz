@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vx8-hU-sQK">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OwS-Ui-141">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
@@ -77,11 +77,34 @@
             </objects>
             <point key="canvasLocation" x="-1077" y="915"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iJj-m1-avS">
+            <objects>
+                <navigationController id="OwS-Ui-141" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rxE-Bk-F1e">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vx8-hU-sQK" kind="relationship" relationship="rootViewController" id="XSs-7U-9ac"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1VS-NV-Ye2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-686" y="130"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="t6A-p3-1o7">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Vx8-hU-sQK" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gxz-pG-F7Z">
+                        <barButtonItem key="rightBarButtonItem" title="Credits" id="lTQ-F0-hQz">
+                            <connections>
+                                <segue destination="WUL-za-uwR" kind="show" id="OlK-yw-NtD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zvg-8P-rlD">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -98,6 +121,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dv2-WB-qej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+        <!--Credits View Controller-->
+        <scene sceneID="V3b-S5-mOQ">
+            <objects>
+                <viewController id="WUL-za-uwR" customClass="CreditsViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1BK-cw-TwB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I created my free logo at LogoMakr.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-xj-Y7f">
+                                <rect key="frame" x="20" y="384" width="374" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rnc-xj-Y7f" firstAttribute="top" secondItem="Vxy-q8-Qzv" secondAttribute="top" constant="296" id="hll-HR-KZV"/>
+                            <constraint firstItem="Vxy-q8-Qzv" firstAttribute="bottom" secondItem="rnc-xj-Y7f" secondAttribute="bottom" constant="350" id="s73-7e-cgQ"/>
+                            <constraint firstItem="rnc-xj-Y7f" firstAttribute="leading" secondItem="Vxy-q8-Qzv" secondAttribute="leading" constant="20" id="zhe-Yf-4Bd"/>
+                            <constraint firstItem="Vxy-q8-Qzv" firstAttribute="trailing" secondItem="rnc-xj-Y7f" secondAttribute="trailing" constant="20" id="ziI-Jh-rIu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vxy-q8-Qzv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="X0h-dm-MeX"/>
+                    <connections>
+                        <outlet property="textView" destination="rnc-xj-Y7f" id="Bto-ez-Qkj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BHH-PO-Ola" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1018.840579710145" y="129.91071428571428"/>
         </scene>
         <!--JLPT N2-->
         <scene sceneID="eNI-3j-cQa">
