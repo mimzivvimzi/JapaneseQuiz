@@ -4,6 +4,6 @@
 
 A Japanese language quiz app divided into JLPT levels.
 
-![](JapaneseQuiz.gif)
+![](example.gif)
 
 Words obtained through [Jisho.org](https://jisho.org/).
