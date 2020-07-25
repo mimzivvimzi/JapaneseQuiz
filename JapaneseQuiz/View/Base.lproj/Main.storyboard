@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OwS-Ui-141">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OwS-Ui-141">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--JLPT N5-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="JLPT5ViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,7 +159,7 @@
         <!--JLPT N2-->
         <scene sceneID="eNI-3j-cQa">
             <objects>
-                <viewController id="ci3-Ug-TUY" customClass="JLPT2ViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ci3-Ug-TUY" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KZh-DR-xE0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,7 +229,7 @@
         <!--JLPT N1-->
         <scene sceneID="HCa-oM-EMP">
             <objects>
-                <viewController id="7SX-kg-fnC" customClass="JLPT1ViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7SX-kg-fnC" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wIi-f3-gwO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,7 +299,7 @@
         <!--JLPT N3-->
         <scene sceneID="H01-zT-dja">
             <objects>
-                <viewController id="kJw-jO-eYA" customClass="JLPT3ViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kJw-jO-eYA" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1mH-vf-alz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -369,7 +369,7 @@
         <!--JLPT N4-->
         <scene sceneID="Auh-oZ-pcS">
             <objects>
-                <viewController id="3l5-FQ-aFD" customClass="JLPT4ViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3l5-FQ-aFD" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8p6-tq-Ub1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

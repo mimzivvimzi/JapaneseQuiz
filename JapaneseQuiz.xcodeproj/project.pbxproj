@@ -10,7 +10,7 @@
 		3147CB4366518EDC88DECA18 /* Pods_JapaneseQuiz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 535CEAAD20D7CDD1298EF1AF /* Pods_JapaneseQuiz.framework */; };
 		690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AB246D2E2C00CBBF7C /* AppDelegate.swift */; };
 		690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AD246D2E2C00CBBF7C /* SceneDelegate.swift */; };
-		690585B0246D2E2C00CBBF7C /* JLPT5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AF246D2E2C00CBBF7C /* JLPT5ViewController.swift */; };
+		690585B0246D2E2C00CBBF7C /* JLPTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585AF246D2E2C00CBBF7C /* JLPTViewController.swift */; };
 		690585B3246D2E2C00CBBF7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B1246D2E2C00CBBF7C /* Main.storyboard */; };
 		690585B5246D2E2F00CBBF7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 690585B4246D2E2F00CBBF7C /* Assets.xcassets */; };
 		690585B8246D2E2F00CBBF7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 690585B6246D2E2F00CBBF7C /* LaunchScreen.storyboard */; };
@@ -47,7 +47,7 @@
 		690585A8246D2E2C00CBBF7C /* JapaneseQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JapaneseQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		690585AB246D2E2C00CBBF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		690585AD246D2E2C00CBBF7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		690585AF246D2E2C00CBBF7C /* JLPT5ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT5ViewController.swift; sourceTree = "<group>"; };
+		690585AF246D2E2C00CBBF7C /* JLPTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPTViewController.swift; sourceTree = "<group>"; };
 		690585B2246D2E2C00CBBF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		690585B4246D2E2F00CBBF7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		690585B7246D2E2F00CBBF7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		690585C5246D3D1500CBBF7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				690585AF246D2E2C00CBBF7C /* JLPT5ViewController.swift */,
+				690585AF246D2E2C00CBBF7C /* JLPTViewController.swift */,
 				693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */,
 				693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */,
 				69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */,
@@ -351,7 +351,7 @@
 			files = (
 				69309DF824B026650027AC97 /* activityIndicator.swift in Sources */,
 				693C78FE24AA1C6B00005C24 /* JLPT3ViewController.swift in Sources */,
-				690585B0246D2E2C00CBBF7C /* JLPT5ViewController.swift in Sources */,
+				690585B0246D2E2C00CBBF7C /* JLPTViewController.swift in Sources */,
 				697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */,
 				699E2EE824BE93100069B110 /* CreditsViewController.swift in Sources */,
 				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
@@ -526,6 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V2K72BM8N;
 				INFOPLIST_FILE = JapaneseQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -544,6 +545,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5V2K72BM8N;
 				INFOPLIST_FILE = JapaneseQuiz/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

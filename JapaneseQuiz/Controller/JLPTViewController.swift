@@ -9,7 +9,7 @@
 import UIKit
 
 
-class JLPT5ViewController: UIViewController {
+class JLPTViewController: UIViewController {
 
     @IBOutlet weak var beginningOfQuestion: UILabel!
     @IBOutlet weak var questionLabel: UILabel!
@@ -30,11 +30,26 @@ class JLPT5ViewController: UIViewController {
     var allQuestions = [Question]()
     var myWordArray = [Word]()
     let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    let url = "https://jisho.org/api/v1/search/words?keyword=%23jlpt-n5"
+    let url = "https://jisho.org/api/v1/search/words?keyword=%23"
     var pageNumber = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let selectedTabBar = tabBarController?.tabBar.selectedItem?.title?.replacingOccurrences(of: " ", with: "-").lowercased()
+        guard (selectedTabBar != nil) else { return }
+        let selectedURL = url+(selectedTabBar ?? "jlpt-n5")
+        print(selectedURL)
+
+        initialUI()
+        performRequest(with: selectedURL) { (questions) in
+            DispatchQueue.main.async {
+                self.allQuestions = questions
+                self.showQuestion()
+            }
+        }
+    }
+    
+    func initialUI() {
         button1.isHidden = true
         button2.isHidden = true
         questionLabel.isHidden = true
@@ -46,14 +61,8 @@ class JLPT5ViewController: UIViewController {
         button2.clipsToBounds = false
         self.view.backgroundColor = #colorLiteral(red: 0.9681944251, green: 0.8723551035, blue: 0.958781302, alpha: 0.8176637414)
         showActivityIndicatory(actInd: activityIndicator, uiView: view)
-        performRequest(with: url) { (questions) in
-            DispatchQueue.main.async {
-                self.allQuestions = questions
-                self.showQuestion()
-            }
-        }
     }
-    
+
     func showQuestion() {
         activityIndicator.stopAnimating()
         button1.isHidden = false
