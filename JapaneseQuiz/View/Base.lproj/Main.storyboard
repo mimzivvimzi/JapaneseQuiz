@@ -299,6 +299,7 @@
         <!--JLPT N3-->
         <scene sceneID="H01-zT-dja">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-L6-Wg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="kJw-jO-eYA" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1mH-vf-alz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -362,13 +363,13 @@
                         <outlet property="scoreLabel" destination="ffo-y8-ob9" id="kd6-s3-v93"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-L6-Wg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="355" y="915"/>
         </scene>
         <!--JLPT N4-->
         <scene sceneID="Auh-oZ-pcS">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGB-yK-fSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3l5-FQ-aFD" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8p6-tq-Ub1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -432,7 +433,6 @@
                         <outlet property="scoreLabel" destination="8uH-66-WNL" id="M2X-SJ-SGK"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGB-yK-fSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="915"/>
         </scene>

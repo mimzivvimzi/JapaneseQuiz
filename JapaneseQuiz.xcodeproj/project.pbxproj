@@ -17,15 +17,11 @@
 		690585C0246D3C6000CBBF7C /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690585BF246D3C6000CBBF7C /* Question.swift */; };
 		69309DF824B026650027AC97 /* activityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69309DF724B026650027AC97 /* activityIndicator.swift */; };
 		69309DFB24B027A20027AC97 /* PerformAPICall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8822495DA2800D5EDCA /* PerformAPICall.swift */; };
-		693C78FE24AA1C6B00005C24 /* JLPT3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */; };
-		693C790024AA1C8000005C24 /* JLPT4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */; };
-		697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697027702473DB17003D4543 /* JLPT1ViewController.swift */; };
 		6989C8812495D9A100D5EDCA /* WordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8802495D9A100D5EDCA /* WordData.swift */; };
 		6989C88B2495DAE900D5EDCA /* JapaneseQuizTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C88A2495DAE900D5EDCA /* JapaneseQuizTests.swift */; };
 		6989C8952495F22500D5EDCA /* UnitTestJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 6989C8942495F22500D5EDCA /* UnitTestJSON.json */; };
 		6989C8972495F37400D5EDCA /* JSONTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6989C8962495F37400D5EDCA /* JSONTest.swift */; };
 		699E2EE824BE93100069B110 /* CreditsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699E2EE724BE93100069B110 /* CreditsViewController.swift */; };
-		69A3C36524A8D59E0020F3A9 /* JLPT2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */; };
 		69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D190692472BA350041BA29 /* ViewController+Constraints.swift */; };
 		69D4A35A247D5739002EFB5C /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D4A359247D5739002EFB5C /* HudView.swift */; };
 		69DE794D24BEEF2E00EAB708 /* example.gif in Resources */ = {isa = PBXBuildFile; fileRef = 69DE794C24BEEF2E00EAB708 /* example.gif */; };
@@ -54,9 +50,6 @@
 		690585B9246D2E2F00CBBF7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		690585BF246D3C6000CBBF7C /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		69309DF724B026650027AC97 /* activityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityIndicator.swift; sourceTree = "<group>"; };
-		693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT3ViewController.swift; sourceTree = "<group>"; };
-		693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT4ViewController.swift; sourceTree = "<group>"; };
-		697027702473DB17003D4543 /* JLPT1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT1ViewController.swift; sourceTree = "<group>"; };
 		6989C8802495D9A100D5EDCA /* WordData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordData.swift; sourceTree = "<group>"; };
 		6989C8822495DA2800D5EDCA /* PerformAPICall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerformAPICall.swift; sourceTree = "<group>"; };
 		6989C8882495DAE900D5EDCA /* JapaneseQuizTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JapaneseQuizTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,7 +59,6 @@
 		6989C8962495F37400D5EDCA /* JSONTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONTest.swift; sourceTree = "<group>"; };
 		699E2ECC24BCA3650069B110 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		699E2EE724BE93100069B110 /* CreditsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsViewController.swift; sourceTree = "<group>"; };
-		69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLPT2ViewController.swift; sourceTree = "<group>"; };
 		69D190692472BA350041BA29 /* ViewController+Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Constraints.swift"; sourceTree = "<group>"; };
 		69D4A359247D5739002EFB5C /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		69DE794C24BEEF2E00EAB708 /* example.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = example.gif; sourceTree = "<group>"; };
@@ -164,10 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				690585AF246D2E2C00CBBF7C /* JLPTViewController.swift */,
-				693C78FF24AA1C8000005C24 /* JLPT4ViewController.swift */,
-				693C78FD24AA1C6B00005C24 /* JLPT3ViewController.swift */,
-				69A3C36424A8D59E0020F3A9 /* JLPT2ViewController.swift */,
-				697027702473DB17003D4543 /* JLPT1ViewController.swift */,
 				69D190692472BA350041BA29 /* ViewController+Constraints.swift */,
 				699E2EE724BE93100069B110 /* CreditsViewController.swift */,
 			);
@@ -350,20 +338,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				69309DF824B026650027AC97 /* activityIndicator.swift in Sources */,
-				693C78FE24AA1C6B00005C24 /* JLPT3ViewController.swift in Sources */,
 				690585B0246D2E2C00CBBF7C /* JLPTViewController.swift in Sources */,
-				697027712473DB17003D4543 /* JLPT1ViewController.swift in Sources */,
 				699E2EE824BE93100069B110 /* CreditsViewController.swift in Sources */,
 				69F677BC246EBEF700A35BC0 /* JishoWords.swift in Sources */,
 				69D1906A2472BA350041BA29 /* ViewController+Constraints.swift in Sources */,
-				69A3C36524A8D59E0020F3A9 /* JLPT2ViewController.swift in Sources */,
 				69D4A35A247D5739002EFB5C /* HudView.swift in Sources */,
 				690585C0246D3C6000CBBF7C /* Question.swift in Sources */,
 				690585AC246D2E2C00CBBF7C /* AppDelegate.swift in Sources */,
 				69309DFB24B027A20027AC97 /* PerformAPICall.swift in Sources */,
 				690585AE246D2E2C00CBBF7C /* SceneDelegate.swift in Sources */,
 				6989C8812495D9A100D5EDCA /* WordData.swift in Sources */,
-				693C790024AA1C8000005C24 /* JLPT4ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
