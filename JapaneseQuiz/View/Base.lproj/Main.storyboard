@@ -19,7 +19,7 @@
                                 <rect key="frame" x="55" y="204" width="305" height="28.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TqF-W1-u92">
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="184" y="293" width="46" height="28.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KAV-WD-QZy">
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JLPT N5" id="yw5-3C-Scs"/>
@@ -299,7 +299,6 @@
         <!--JLPT N3-->
         <scene sceneID="H01-zT-dja">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-L6-Wg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="kJw-jO-eYA" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1mH-vf-alz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -363,13 +362,13 @@
                         <outlet property="scoreLabel" destination="ffo-y8-ob9" id="kd6-s3-v93"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t7a-L6-Wg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="355" y="915"/>
         </scene>
         <!--JLPT N4-->
         <scene sceneID="Auh-oZ-pcS">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGB-yK-fSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="3l5-FQ-aFD" customClass="JLPTViewController" customModule="JapaneseQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8p6-tq-Ub1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -433,6 +432,7 @@
                         <outlet property="scoreLabel" destination="8uH-66-WNL" id="M2X-SJ-SGK"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGB-yK-fSm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-348" y="915"/>
         </scene>
