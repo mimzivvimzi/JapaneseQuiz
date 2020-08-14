@@ -132,8 +132,14 @@ class JLPTViewController: UIViewController {
         questionNumber = 0
         score = 0
         pageNumber += 1
-        let newURL = "\(url)&page=\(pageNumber)"
-        performRequest(with: newURL) { (questions) in
+        
+        let selectedTabBar = tabBarController?.tabBar.selectedItem?.title?.replacingOccurrences(of: " ", with: "-").lowercased()
+        guard (selectedTabBar != nil) else { return }
+        let selectedURL = "\(url)\(selectedTabBar ?? "jlpt-n5")&page=\(pageNumber)"
+        print(selectedURL)
+
+        initialUI()
+        performRequest(with: selectedURL) { (questions) in
             DispatchQueue.main.async {
                 self.allQuestions = questions
                 self.showQuestion()
