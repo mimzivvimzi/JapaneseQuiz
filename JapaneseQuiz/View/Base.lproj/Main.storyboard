@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Hey-4g-DUo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K7F-Jg-BUa"/>
                             <constraint firstItem="Hey-4g-DUo" firstAttribute="top" secondItem="wig-VP-bzZ" secondAttribute="bottom" constant="69" id="KXX-La-iqk"/>
@@ -142,13 +142,13 @@
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="I created my free logo at LogoMakr.com" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rnc-xj-Y7f">
                                 <rect key="frame" x="20" y="384" width="374" height="128"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="textColor" name="Button-text"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="rnc-xj-Y7f" firstAttribute="top" secondItem="Vxy-q8-Qzv" secondAttribute="top" constant="296" id="hll-HR-KZV"/>
                             <constraint firstItem="Vxy-q8-Qzv" firstAttribute="bottom" secondItem="rnc-xj-Y7f" secondAttribute="bottom" constant="350" id="s73-7e-cgQ"/>
@@ -220,7 +220,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <viewLayoutGuide key="safeArea" id="sY9-DA-aU4"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JLPT N2" id="dDa-Nf-4fH"/>
@@ -291,7 +291,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="TZ0-j1-zuQ" firstAttribute="leading" secondItem="GI6-l9-AU5" secondAttribute="leading" constant="56" id="Ld1-Tn-7Ww"/>
                             <constraint firstItem="fM2-YM-kxE" firstAttribute="top" secondItem="TZ0-j1-zuQ" secondAttribute="bottom" constant="69" id="MYJ-XZ-MNk"/>
@@ -369,7 +369,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <viewLayoutGuide key="safeArea" id="Fea-Ba-nNI"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JLPT N3" id="SBJ-Tz-Uxi"/>
@@ -439,7 +439,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="Background"/>
                         <viewLayoutGuide key="safeArea" id="kmO-al-XTe"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="JLPT N4" id="vRe-Kh-Dtt"/>
@@ -457,6 +457,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="Background">
+            <color red="0.83673138215280007" green="0.80691996617948825" blue="0.84406725888324874" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Button-color">
             <color red="0.37900000810623169" green="0.90700000524520874" blue="0.86299997568130493" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
